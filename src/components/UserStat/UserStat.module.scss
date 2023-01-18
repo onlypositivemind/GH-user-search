@@ -1,0 +1,37 @@
+:global {
+	body[data-theme='light'] {
+		--stat-bg: var(--gray-50);
+		--stat-color: var(--gray-300);
+	}
+
+	body[data-theme='dark'] {
+		--stat-bg: var(--gray-500);
+		--stat-color: var(--white);
+	}
+}
+
+.userStat {
+	padding: 15px 32px;
+	background-color: var(--stat-bg);
+	border-radius: 10px;
+	color: var(--stat-color);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	&Title {
+		color: var(--gray-200);
+		line-height: 1.5;
+	}
+
+	&Number {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 1.5;
+	}
+}
